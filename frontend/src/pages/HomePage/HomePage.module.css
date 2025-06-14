@@ -1,0 +1,192 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('../../assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  text-align: left;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.ctaButton {
+  
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.viewAllButton {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #e9e9e9;
+  color: rgb(121, 121, 121);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.viewAllButton:hover {
+  background-color: #b5b5b5;
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Стили для блока скидки */
+.discountSection {
+  margin: 40px 0;
+}
+
+.discountContainer {
+  display: flex;
+  background-color: #4CAF50; /* Зеленый цвет */
+  border-radius: 15px; /* Закругленные углы */
+  overflow: hidden;
+  position: relative;
+  min-height: 300px; /* Минимальная высота блока */
+}
+
+.discountContent {
+  flex: 1;
+  padding: 30px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.formWrapper {
+  margin-left: auto;
+  max-width: 400px;
+  width: 100%;
+}
+
+
+.discountTitle {
+  text-align: right;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.discountText {
+  text-align: right;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.discountForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.discountInput {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 16px;
+}
+
+.discountInput::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.discountButton {
+  padding: 12px 25px;
+  background-color: white;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.discountButton:hover {
+  background-color: #f0f0f0;
+}
+
+.saleImageContainer {
+  width: 40%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.saleImage {
+  width: 150%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .discountContainer {
+    flex-direction: column;
+  }
+  
+  .saleImageContainer {
+    width: 100%;
+    height: 200px;
+    order: -1; /* Картинка будет сверху на мобильных */
+  }
+  
+  .discountContent {
+    padding: 20px;
+  }
+  
+  .discountTitle {
+    font-size: 24px;
+  }
+  
+  .discountForm {
+    max-width: 100%;
+  }
+}
