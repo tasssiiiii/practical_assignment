@@ -18,7 +18,7 @@ const HomePage = () => {
     dispatch(fetchAllProducts());
   }, [dispatch]);
 
-  // Нормализуем данные продуктов
+ 
   const normalizedProducts = products.map(p => ({
     ...(p.dataValues || p),
     name: p.dataValues?.title || p.title
@@ -123,7 +123,7 @@ const HomePage = () => {
     ) : (
       normalizedProducts
         .filter(product => product.discont_price && product.discont_price < product.price)
-        .slice(0, 4) // Ограничиваем количество товаров до 8
+        .slice(0, 4) 
         .map(product => (
           <ProductCard key={product.id} product={product} />
         ))

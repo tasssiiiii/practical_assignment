@@ -1,4 +1,4 @@
-/* Общие стили */
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -17,7 +17,7 @@ a {
   padding: 0 20px;
 }
 
-/* Хлебные крошки */
+
 .breadcrumbs {
   font-size: 14px;
   color: #666;
@@ -28,7 +28,7 @@ a {
   margin: 0 5px;
 }
 
-/* Кнопки */
+
 .btn {
   padding: 10px 20px;
   border-radius: 4px;

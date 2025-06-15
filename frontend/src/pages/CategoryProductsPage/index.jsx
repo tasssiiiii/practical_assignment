@@ -42,7 +42,7 @@ function CategoryProductsPage() {
     fetchData();
   }, [categoryId]);
 
-  // Фильтрация продуктов при изменении параметров
+  
   useEffect(() => {
     const filtered = products.filter(product => {
       const price = product.discont_price || product.price;
@@ -65,14 +65,14 @@ function CategoryProductsPage() {
   if (error) return (
     <div className={styles.error}>
       <p>{error}</p>
-      <Link to="/categories" className={styles.backLink}>Back to categories</Link>
+      <Link to="/categories" className={styles.backLink}>Вернуться к категориям</Link>
     </div>
   );
 
   return (
     <div className={styles.categoryProductsPage}>
       <div className={styles.header}>
-        <h1>{category?.title} Products</h1>
+        <h1>{category?.title} Товары из выбранной категории</h1>
         <div className={styles.breadcrumbs}>
           <Link to="/">Главная</Link>
           <span> / </span>

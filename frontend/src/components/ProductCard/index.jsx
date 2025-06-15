@@ -4,14 +4,14 @@ import styles from './ProductCard.module.css';
 
 const ProductCard = ({ product }) => {
   const productData = product?.dataValues || product;
-  const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3333'; // Добавьте в .env
+  const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3333'; 
 
   if (!productData) {
     console.error('Product data is missing');
     return null;
   }
 
-  console.log('Rendering product:', productData); // Отладочная информация
+  console.log('Rendering product:', productData); 
 
   return (
     <div className={styles.card}>

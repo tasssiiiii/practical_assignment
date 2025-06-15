@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'; // Добавлен импорт useState
+import React, { useEffect, useState } from 'react'; 
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchAllProducts } from '../../store/slices/productsSlice';
@@ -9,7 +9,7 @@ import styles from './DiscountedProductsPage.module.css';
 const DiscountedProductsPage = () => {
   const dispatch = useDispatch();
   const { products, status } = useSelector(state => state.products);
-  const [filteredProducts, setFilteredProducts] = useState([]); // Теперь useState определен
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
     dispatch(fetchAllProducts());

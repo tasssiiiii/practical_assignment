@@ -51,7 +51,7 @@ const CatalogPage = () => {
     <div className={styles.container}>
       <h1 className={styles.title}>Каталог товаров</h1>
       
-      {/* Поисковая строка */}
+      
       <div className={styles.searchContainer}>
         <input
           type="text"
@@ -62,7 +62,7 @@ const CatalogPage = () => {
         />
       </div>
 
-      {/* Фильтры */}
+      
       <div className={styles.filters}>
         <div className={styles.priceFilter}>
           <h3>Цена, ₽</h3>
@@ -99,12 +99,12 @@ const CatalogPage = () => {
         </div>
       </div>
 
-      {/* Количество найденных товаров */}
+      
       <div className={styles.resultsCount}>
         Найдено товаров: {filteredProducts.length}
       </div>
       
-      {/* Список товаров */}
+      
       <div className={styles.productsGrid}>
         {filteredProducts.length > 0 ? (
           filteredProducts.map(product => (

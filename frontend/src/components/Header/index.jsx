@@ -17,6 +17,7 @@ const Header = () => {
           <Link to="/" className={styles.navLink}>Главная</Link>
           <Link to="/catalog" className={styles.navLink}>Все товары</Link>
           <Link to="/category" className={styles.navLink}>Категории</Link>
+          <Link to="/discounted" className={styles.navLink}>Скидки</Link>
         </nav>
         
         <div className={styles.actions}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.css';
-import instagramIcon from '../../assets/svg/instagram.svg'; // Импорт как URL
-import whatsappIcon from '../../assets/svg/whatsapp.svg'; // Импорт как URL
+import instagramIcon from '../../assets/svg/instagram.svg'; 
+import whatsappIcon from '../../assets/svg/whatsapp.svg';
 import MapImage from '../../assets/images/map.png';
 
 const Footer = () => {
