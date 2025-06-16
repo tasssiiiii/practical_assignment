@@ -40,22 +40,22 @@ const CatalogPage = () => {
   };
 
   if (status === 'loading') {
-    return <div className={styles.loading}>Загрузка товаров...</div>;
+    return <div className={styles.loading}>Loading products...</div>;
   }
 
   if (error) {
-    return <div className={styles.error}>Ошибка загрузки: {error}</div>;
+    return <div className={styles.error}>Error: {error}</div>;
   }
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Каталог товаров</h1>
+      <h1 className={styles.title}>Produts</h1>
       
       
       <div className={styles.searchContainer}>
         <input
           type="text"
-          placeholder="Поиск товаров..."
+          placeholder="Searching of products..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className={styles.searchInput}
@@ -65,7 +65,7 @@ const CatalogPage = () => {
       
       <div className={styles.filters}>
         <div className={styles.priceFilter}>
-          <h3>Цена, ₽</h3>
+          <h3>Price, $</h3>
           <div className={styles.priceInputs}>
             <input
               type="number"
@@ -73,7 +73,7 @@ const CatalogPage = () => {
               value={priceRange.min}
               onChange={handlePriceChange}
               min="0"
-              placeholder="От"
+              placeholder="From"
             />
             <span>-</span>
             <input
@@ -82,7 +82,7 @@ const CatalogPage = () => {
               value={priceRange.max}
               onChange={handlePriceChange}
               min={priceRange.min}
-              placeholder="До"
+              placeholder="To"
             />
           </div>
         </div>
@@ -94,14 +94,14 @@ const CatalogPage = () => {
               checked={onlyDiscounted}
               onChange={() => setOnlyDiscounted(!onlyDiscounted)}
             />
-            <span>Только со скидкой</span>
+            <span>only discounted</span>
           </label>
         </div>
       </div>
 
       
       <div className={styles.resultsCount}>
-        Найдено товаров: {filteredProducts.length}
+        Products found: {filteredProducts.length}
       </div>
       
       

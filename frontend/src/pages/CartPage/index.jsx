@@ -116,31 +116,26 @@ function CartPage() {
   return (
     <div className={styles.cartPage}>
       <div className={styles.cartHeader}>
-        <h1 className={styles.title}>Корзина</h1>
+        <h1 className={styles.title}>Shopping Cart</h1>
         <div className={styles.breadcrumbs}>
-          <Link to="/" className={styles.breadcrumbLink}>Главная</Link>
+          <Link to="/" className={styles.breadcrumbLink}>Home</Link>
           <span className={styles.breadcrumbSeparator}> / </span>
-          <span className={styles.breadcrumbCurrent}>Корзина</span>
+          <span className={styles.breadcrumbCurrent}>Shopping Cart</span>
         </div>
       </div>
 
       {items.length === 0 ? (
         <div className={styles.emptyCart}>
-          <h2 className={styles.emptyCartTitle}>Ваша корзина пуста</h2>
-          <p className={styles.emptyCartText}>Добавьте товары из каталога</p>
+          <h2 className={styles.emptyCartTitle}>Looks like you have no items in your basket currently.</h2>
+          
           <Link to="/catalog" className={styles.returnBtn}>
-            Вернуться в каталог
+            Continue Shopping
           </Link>
         </div>
       ) : (
         <div className={styles.cartContent}>
           <div className={styles.cartItems}>
-            <div className={styles.cartItemsHeader}>
-              <span>Товар</span>
-              <span>Количество</span>
-              <span>Сумма</span>
-              <span></span>
-            </div>
+          
 
             {items.map(item => (
               <div key={item.id} className={styles.cartItem}>
@@ -203,20 +198,20 @@ function CartPage() {
           </div>
 
           <div className={styles.cartSummary}>
-            <h3 className={styles.summaryTitle}>Итого</h3>
+            <h3 className={styles.summaryTitle}>Order Details</h3>
             
             <div className={styles.summaryRow}>
-              <span>Товары ({totalItems})</span>
+              <span>Products ({totalItems})</span>
               <span>{totalPrice} $</span>
             </div>
             
             <div className={styles.summaryRow}>
-              <span>Доставка</span>
-              <span>Бесплатно</span>
+              <span>Delivery</span>
+              <span>Free</span>
             </div>
             
             <div className={`${styles.summaryRow} ${styles.totalRow}`}>
-              <span>К оплате</span>
+              <span>Total</span>
               <span>{totalPrice} $</span>
             </div>
 
@@ -226,7 +221,7 @@ function CartPage() {
                 name="name"
                 value={customerData.name}
                 onChange={handleInputChange}
-                placeholder="Ваше имя"
+                placeholder="Your Name"
                 className={styles.inputField}
                 required
               />
@@ -235,7 +230,7 @@ function CartPage() {
                 name="phone"
                 value={customerData.phone}
                 onChange={handleInputChange}
-                placeholder="Телефон"
+                placeholder="Phone"
                 className={styles.inputField}
                 required
               />
@@ -257,15 +252,16 @@ function CartPage() {
               className={styles.paymentBtn}
               disabled={items.length === 0}
             >
-              Оплатить
+              Order
             </button>
           </div>
         </div>
       )}
 
       <Modal isOpen={showModal} onClose={closeModal}>
-        <h2>Спасибо за покупку!</h2>
-        <p>Ваш заказ успешно оплачен.</p>
+        <h2>Congratulations!</h2>
+        <p>Your order has been successfully placed on the website.
+A manager will contact you shortly to confirm your order.</p>
       </Modal>
     </div>
   );

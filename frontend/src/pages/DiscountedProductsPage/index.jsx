@@ -26,22 +26,22 @@ const DiscountedProductsPage = () => {
   }, [products]);
 
   if (status === 'loading') {
-    return <div className={styles.loading}>Загрузка товаров...</div>;
+    return <div className={styles.loading}>Loading products...</div>;
   }
 
   return (
     <div className={styles.container}>
       <Breadcrumbs 
         items={[
-          { label: 'Главная', path: '/' },
-          { label: 'Товары со скидкой' }
+          { label: 'Home', path: '/' },
+          { label: 'Sales' }
         ]}
       />
 
-      <h1 className={styles.title}>Товары со скидкой</h1>
+      <h1 className={styles.title}>Sales</h1>
       
       <div className={styles.resultsCount}>
-        Найдено товаров: {filteredProducts.length}
+        Products found: {filteredProducts.length}
       </div>
 
       <div className={styles.productsGrid}>

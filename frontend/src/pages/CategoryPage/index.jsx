@@ -43,7 +43,7 @@ function CategoryPage() {
           onClick={() => window.location.reload()}
           className={styles.retryButton}
         >
-          Попробовать еще раз
+          Try again
         </button>
       </div>
     );
@@ -52,11 +52,11 @@ function CategoryPage() {
   return (
     <div className={styles.categoriesPage}>
       <div className={styles.header}>
-        <h1>Категории товаров</h1>
+        <h1>Categories</h1>
         <div className={styles.breadcrumbs}>
-          <Link to="/">Главная</Link>
+          <Link to="/">Home</Link>
           <span> / </span>
-          <span>Категории</span>
+          <span>Categories</span>
         </div>
       </div>
 
@@ -70,7 +70,7 @@ function CategoryPage() {
           ))
         ) : (
           <div className={styles.noCategories}>
-            Нет доступных категорий
+            No categories
           </div>
         )}
       </div>

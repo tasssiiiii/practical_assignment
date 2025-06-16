@@ -11,10 +11,10 @@ function NotFoundPage() {
           alt="404 Страница не найдена" 
           className={styles.notFoundImage}
         />
-        <h1 className={styles.title}>Страница не найдена</h1>
-        <p className={styles.message}>Извините, запрашиваемая страница не существует</p>
+        <h1 className={styles.title}>Page not found</h1>
+        <p className={styles.message}>Sorry, the requested page does not exist</p>
         <Link to="/" className={styles.homeLink}>
-          Вернуться на главную
+          Back to home
         </Link>
       </div>
     </div>

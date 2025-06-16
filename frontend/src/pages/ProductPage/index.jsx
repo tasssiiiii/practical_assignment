@@ -40,11 +40,11 @@ const ProductPage = () => {
   };
 
   if (status === 'loading') {
-    return <div className={styles.container}>Загрузка...</div>;
+    return <div className={styles.container}>Loading...</div>;
   }
 
   if (!currentProduct || currentProduct.length === 0) {
-    return <div className={styles.container}>Товар не найден</div>;
+    return <div className={styles.container}>Product not found</div>;
   }
 
   const product = currentProduct[0];
@@ -53,8 +53,8 @@ const ProductPage = () => {
     <div className={styles.container}>
       <Breadcrumbs 
         items={[
-          { label: 'Главная', path: '/' },
-          { label: 'Каталог', path: '/catalog' },
+          { label: 'Home', path: '/' },
+          { label: 'All produts', path: '/catalog' },
           { label: product.title }
         ]}
       />
@@ -78,7 +78,7 @@ const ProductPage = () => {
           <div className={styles.priceContainer}>
             {product.discont_price ? (
               <>
-                <span className={styles.oldPrice}>{product.price} ₽</span>
+                <span className={styles.oldPrice}>{product.price} $</span>
                 <span className={styles.discountedPrice}>{product.discont_price} $</span>
                 <span className={styles.discountPercent}>
                   {Math.round((1 - product.discont_price / product.price) * 100)}%
@@ -110,11 +110,11 @@ const ProductPage = () => {
             onClick={handleAddToCart}
             className={styles.addToCartButton}
           >
-            Добавить в корзину
+            Add to cart
           </button>
 
           <div className={styles.description}>
-            <h3>Описание товара</h3>
+            <h3>Description</h3>
             <p>{product.description}</p>
           </div>
         </div>

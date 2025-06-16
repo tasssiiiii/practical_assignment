@@ -32,21 +32,21 @@ const HomePage = () => {
       <section className={styles.hero}>
         
         <div className={styles.heroContent}>
-          <h1>Потрясающие скидки на товары для сада и огорода</h1>
+          <h1>Amazing Discounts on Garden Products!</h1>
           
-          <Link to="/catalog" className={styles.ctaButton}>Смотреть каталог</Link>
+          <Link to="/catalog" className={styles.ctaButton}>Check out</Link>
         </div>
       </section>
 
       <section className={styles.section}>
         <div className={styles.sectionHeader}>
-        <h2 className={styles.sectionTitle}>Категории товаров</h2>
+        <h2 className={styles.sectionTitle}>Categories</h2>
          <Link to="/category" className={styles.viewAllButton}>
-            Смотреть все
+            All Categories
           </Link></div>
         <div className={styles.categoriesGrid}>
           {status === 'loading' ? (
-            <p>Загрузка...</p>
+            <p>Loading...</p>
           ) : (
             categories.slice(0, 4).map(category => {
               const categoryData = category.dataValues || category;
@@ -75,31 +75,31 @@ const HomePage = () => {
           </div>
           
           <div className={styles.discountContent}>
-            <h2 className={styles.discountTitle}>Скидка 5% на первый заказ</h2>
-            <p className={styles.discountText}>Оставьте свои данные и получите промокод на скидку</p>
+            <h2 className={styles.discountTitle}>5% off on the first order</h2>
+           
             
             <div className={styles.formWrapper}>
               <form className={styles.discountForm}>
                 <input 
                   type="text" 
-                  placeholder="Ваше имя" 
+                  placeholder="Your Name" 
                   className={styles.discountInput}
                   required
                 />
                 <input 
                   type="tel" 
-                  placeholder="Номер телефона" 
+                  placeholder="Phone" 
                   className={styles.discountInput}
                   required
                 />
                 <input 
                   type="email" 
-                  placeholder="Электронная почта" 
+                  placeholder="Email" 
                   className={styles.discountInput}
                   required
                 />
                 <button type="submit" className={styles.discountButton}>
-                  Получить скидку
+                  Get a discount
                 </button>
               </form>
             </div>
@@ -110,16 +110,16 @@ const HomePage = () => {
 
       <section className={styles.section}>
         <div className={styles.sectionHeader}>
-  <h2 className={styles.sectionTitle}>Товары со скидкой</h2>
+  <h2 className={styles.sectionTitle}>Sale</h2>
    <Link 
             to="/discounted" 
             className={styles.viewAllButton}
           >
-            Смотреть все
+            All Sales
           </Link></div>
   <div className={styles.productsGrid}>
     {status === 'loading' ? (
-      <p>Загрузка...</p>
+      <p>Loading...</p>
     ) : (
       normalizedProducts
         .filter(product => product.discont_price && product.discont_price < product.price)

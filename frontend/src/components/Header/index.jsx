@@ -14,10 +14,10 @@ const Header = () => {
         </Link>
         
         <nav className={styles.nav}>
-          <Link to="/" className={styles.navLink}>Главная</Link>
-          <Link to="/catalog" className={styles.navLink}>Все товары</Link>
-          <Link to="/category" className={styles.navLink}>Категории</Link>
-          <Link to="/discounted" className={styles.navLink}>Скидки</Link>
+          <Link to="/" className={styles.navLink}>Main Page</Link>
+          <Link to="/catalog" className={styles.navLink}>All Products</Link>
+          <Link to="/category" className={styles.navLink}>All Categories</Link>
+          <Link to="/discounted" className={styles.navLink}>All Sales</Link>
         </nav>
         
         <div className={styles.actions}>

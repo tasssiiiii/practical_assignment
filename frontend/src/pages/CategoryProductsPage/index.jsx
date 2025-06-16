@@ -65,18 +65,18 @@ function CategoryProductsPage() {
   if (error) return (
     <div className={styles.error}>
       <p>{error}</p>
-      <Link to="/categories" className={styles.backLink}>Вернуться к категориям</Link>
+      <Link to="/categories" className={styles.backLink}>Back to categories</Link>
     </div>
   );
 
   return (
     <div className={styles.categoryProductsPage}>
       <div className={styles.header}>
-        <h1>{category?.title} Товары из выбранной категории</h1>
+        <h1>{category?.title} Products from the selected category</h1>
         <div className={styles.breadcrumbs}>
-          <Link to="/">Главная</Link>
+          <Link to="/">Home</Link>
           <span> / </span>
-          <Link to="/category">Категории</Link>
+          <Link to="/category">Categories</Link>
           <span> / </span>
           <span>{category?.title}</span>
         </div>
@@ -85,7 +85,7 @@ function CategoryProductsPage() {
      
       <div className={styles.filters}>
         <div className={styles.priceFilter}>
-          <h3>Цена, $</h3>
+          <h3>Price, $</h3>
           <div className={styles.priceInputs}>
             <input
               type="number"
@@ -93,7 +93,7 @@ function CategoryProductsPage() {
               value={priceRange.min}
               onChange={handlePriceChange}
               min="0"
-              placeholder="От"
+              placeholder="From"
             />
             <span>-</span>
             <input
@@ -102,7 +102,7 @@ function CategoryProductsPage() {
               value={priceRange.max}
               onChange={handlePriceChange}
               min={priceRange.min}
-              placeholder="До"
+              placeholder="To"
             />
           </div>
         </div>
@@ -114,7 +114,7 @@ function CategoryProductsPage() {
               checked={onlyDiscounted}
               onChange={() => setOnlyDiscounted(!onlyDiscounted)}
             />
-            <span>Только со скидкой</span>
+            <span>Only discounted</span>
           </label>
         </div>
       </div>
@@ -127,7 +127,7 @@ function CategoryProductsPage() {
           ))
         ) : (
           <div className={styles.noProducts}>
-            В этой категории нет товаров по выбранным фильтрам
+            There are no products in this category based on the selected filters.
           </div>
         )}
       </div>
